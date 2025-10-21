@@ -1,11 +1,11 @@
-# 🧠 Image Analysis and Processing Environment
+# Image Analysis and Processing Environment
 
 This environment is configured for projects focused on **quantitative color analysis** and **scientific image processing**.  
 It integrates widely used libraries in **data science**, **computer vision**, and **machine learning**, ensuring **reproducibility** and **standardization** of results.
 
 ---
 
-## 📦 Main Dependencies
+## Main Dependencies
 
 | Library | Version | Description |
 
@@ -20,9 +20,20 @@ It integrates widely used libraries in **data science**, **computer vision**, an
 - **tqdm**: 4.67.1 — Progress bars for tracking long or iterative tasks  
 
 ---
+ 
+## Contents
 
-## 🧰 Environment Installation
+The following algorithms were implemented to detect and quantify bone colors.
+Each folder contains the implementation and example outputs for the respective method.
 
-### 1. Create the Conda environment
-```bash
-conda create -n image-env python=3.10.16
+| Algorithm | Folder | Description |
+|------------|---------|-------------|
+| **GMM** | [`scripts/gmm/`](scripts/gmm/) | Gaussian Mixture Model for unsupervised color clustering. |
+| **GMM Interpolated** | [`scripts/gmm-interpolated/`](scripts/gmm-interpolated/) | GMM using interpolated Ground Truth for smoother cluster assignment. |
+| **GMM Weighted Interpolated** | [`scripts/gmm-weighted-interpolated/`](scripts/gmm-weighted-interpolated/) | GMM with pixel-weighting and interpolated Ground Truth to improve local accuracy. |
+| **K-Means** | [`scripts/k-means/`](scripts/k-means/) | K-Means clustering for basic color segmentation. |
+| **K-Means Interpolated** | [`scripts/k-means-interpolated/`](scripts/k-means-interpolated/) | K-Means with interpolated Ground Truth for enhanced color smoothness. |
+| **Median Cut** | [`scripts/median-cut/`](scripts/median-cut/) | Median Cut algorithm for palette extraction. |
+| **Median Cut Interpolated** | [`scripts/median-cut-interpolated/`](scripts/median-cut-interpolated/) | Median Cut with interpolated Ground Truth for refined color distribution. |
+
+
